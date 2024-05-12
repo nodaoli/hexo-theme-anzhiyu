@@ -6,10 +6,10 @@ if site.data.about
     - let aboutName = item.name || theme.author
     - let aboutDescription = item.description || config.description
     - let helloAbout = item.helloAbout
-    - let skillsTips = item.skillsTips
-    - let careers = item.careers
-    - let crrList = careers.list
-    - let crrItem = careers.item
+    //- - let skillsTips = item.skillsTips
+    //- - let careers = item.careers
+    //- - let crrList = careers.list
+    //- - let crrItem = careers.item
     - let avatarSkills = item.avatarSkills
     #about-page
       .author-box
@@ -57,7 +57,7 @@ if site.data.about
           h1=helloAbout
       
       .author-content
-        .author-content-item.skills
+        //- .author-content-item.skills
           .card-content
             .author-content-item-tips=skillsTips.tips
             span.author-content-item-title=skillsTips.title
@@ -73,7 +73,7 @@ if site.data.about
                         .skill-name
                           span=item.name 
                   .etc ...
-        .author-content-item.careers
+        //- .author-content-item.careers
           .card-content
             .author-content-item-tips=careers.tips
             span.author-content-item-title=careers.title
@@ -193,7 +193,7 @@ if site.data.about
                     .comic-item-cover
                       img(src=i.cover, alt=i.name)
       
-      .author-content
+      //- .author-content
         - let {music_tips, music_title, music_link, music_bg} = item.music
         - let {like_tips, like_title, like_bottom, like_bg} = item.like
         .author-content-item.like-technology(style=`background: url(${like_bg}) top / cover no-repeat;`)
@@ -219,8 +219,8 @@ if site.data.about
           .create-site-post.author-content-item.single
             != page.content
         
-      - let rawData = item.reward_list
-      if rawData
+      //- - let rawData = item.reward_list
+      //- if rawData
         - let sortedByDate = rawData.slice().sort((a, b) => new Date(b.datatime) - new Date(a.datatime));
         .author-content
           .author-content-item.single.reward#about-reward
